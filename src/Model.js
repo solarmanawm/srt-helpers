@@ -1,15 +1,18 @@
-// @ts-nocheck
+/**
+ * @template [T=unknown]
+ * @typedef {new (...args: any[]) => T} ClassConstructor
+ */
 
 /**
  * Возвращает массив типизированных элементов или пустой массив
+ * @template T
  * @param {any[]} array
- * @param {Class|String|Number} Type
- * @return {Array}
+ * @param {ClassConstructor<T>} Type
+ * @return {T[]}
  */
 export function getTypedArray(array, Type) {
-    const TYPES = ['Number', 'String'];
-
-    const arrayConstructor = value => TYPES.includes(Type.name) ? Type(value) : new Type(value);
+    // @ts-ignore
+    const arrayConstructor = (payload) => new Type(payload);
     const hasElements = Array.isArray(array) && !!array.length;
 
     return hasElements ? array.map(el => arrayConstructor(el)) : [];

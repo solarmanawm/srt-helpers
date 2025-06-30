@@ -1,11 +1,11 @@
-function c(n, e) {
-  const r = ["Number", "String"], o = (t) => r.includes(e.name) ? e(t) : new e(t);
-  return Array.isArray(n) && !!n.length ? n.map((t) => o(t)) : [];
+function s(t, e) {
+  const o = (n) => new e(n);
+  return Array.isArray(t) && !!t.length ? t.map((n) => o(n)) : [];
 }
-const g = (n) => n ? String(n) : "", m = (n) => Number(n) || 0, i = (n) => !!n;
+const c = (t) => t ? String(t) : "", g = (t) => Number(t) || 0, a = (t) => !!t;
 export {
-  i as getBoolean,
-  m as getNumber,
-  g as getString,
-  c as getTypedArray
+  a as getBoolean,
+  g as getNumber,
+  c as getString,
+  s as getTypedArray
 };

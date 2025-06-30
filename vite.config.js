@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import fs from 'fs';
+import dts from 'vite-plugin-dts';
 
 // Автоматически находим все .js/.ts файлы в src/
 const entries = fs.readdirSync(path.resolve(__dirname, 'src'))
@@ -20,4 +21,11 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
   },
+  plugins: [
+    dts({
+      include: ['src/**/*.js', 'src/**/*.ts'], // Обрабатывать JS и TS
+      outDir: 'dist/types',                     // Куда складывать .d.ts
+      entryRoot: 'src',                         // Корень исходников
+    }),
+  ],
 });
