@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function o(e,n){const r=t=>new n(t);return Array.isArray(e)&&!!e.length?e.map(t=>r(t)):[]}const g=e=>e?String(e):"",s=e=>Number(e)||0,a=e=>!!e;exports.getBoolean=a;exports.getNumber=s;exports.getString=g;exports.getTypedArray=o;

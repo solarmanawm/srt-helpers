@@ -12,5 +12,22 @@
     "typescript": "~5.8.3",
     "vite": "^7.0.0",
     "vite-plugin-dts": "^4.5.4"
-  }
+  },
+  "exports": {
+    "./constants": {
+      "import": "./dist/constants.es.js",
+      "require": "./dist/constants.cjs.js"
+    },
+    "./Model": {
+      "import": "./dist/Model.es.js",
+      "require": "./dist/Model.cjs.js"
+    }
+  },
+  "main": "./dist/srt-helpers.umd.js",
+  "module": "./dist/srt-helpers.es.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ]
 }

@@ -16,7 +16,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: Object.fromEntries(entries.map(e => [e.name, e.path])),
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     outDir: 'dist',
     emptyOutDir: true,
