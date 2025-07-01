@@ -20,21 +20,21 @@ export function getTypedArray(array, Type) {
 
 /**
  * Возвращает приведенную к типу строку или пустую строку
- * @param {string} value
+ * @param {string} [value]
  * @return {string}
  */
 export const getString = value => value ? String(value) : '';
 
 /**
  * Возвращает приведенное к типу число или 0
- * @param {number} value
+ * @param {number} [value]
  * @return {number}
  */
 export const getNumber = value => Number(value) || 0;
 
 /**
  * Возвращает значение, приведенное к булевому типу
- * @param {any} value
+ * @param {any} [value]
  * @return {boolean}
  */
 export const getBoolean = value => Boolean(value);

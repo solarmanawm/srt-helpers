@@ -10,7 +10,7 @@
  * @return {T[]}
  */
 export function getTypedArray<T>(array: any[], Type: ClassConstructor<T>): T[];
-export function getString(value: string): string;
-export function getNumber(value: number): number;
-export function getBoolean(value: any): boolean;
+export function getString(value?: string): string;
+export function getNumber(value?: number): number;
+export function getBoolean(value?: any): boolean;
 export type ClassConstructor<T = unknown> = new (...args: any[]) => T;
