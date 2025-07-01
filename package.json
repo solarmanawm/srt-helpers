@@ -14,12 +14,12 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "exports": {
-    "./constants": {
+    "constants": {
       "types": "./dist/types/constants.d.ts",
       "import": "./dist/constants.es.js",
       "require": "./dist/constants.cjs.js"
     },
-    "./Model": {
+    "Model": {
       "types": "./dist/types/Model.d.ts",
       "import": "./dist/Model.es.js",
       "require": "./dist/Model.cjs.js"
