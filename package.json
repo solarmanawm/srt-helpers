@@ -15,10 +15,12 @@
   },
   "exports": {
     "./constants": {
+      "types": "./dist/constants.d.ts",
       "import": "./dist/constants.es.js",
       "require": "./dist/constants.cjs.js"
     },
     "./Model": {
+      "types": "./dist/Model.d.ts",
       "import": "./dist/Model.es.js",
       "require": "./dist/Model.cjs.js"
     }
